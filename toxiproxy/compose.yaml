@@ -1,0 +1,11 @@
+services:
+  upstream:
+    image: python:3.12-slim
+    command: ["python", "-m", "http.server", "8000"]
+  toxiproxy:
+    image: ghcr.io/shopify/toxiproxy:2.9.0
+    ports:
+      - "8474:8474"   # admin API
+      - "8666:8666"   # proxied upstream
+    depends_on:
+      - upstream

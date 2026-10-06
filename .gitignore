@@ -1,0 +1,16 @@
+.env
+*.pem
+*.key
+*.tfstate*
+.terraform/
+target/
+build/
+.gradle/
+node_modules/
+__pycache__/
+.idea/
+.vscode/
+*.log
+.DS_Store
+results.jtl
+report/
